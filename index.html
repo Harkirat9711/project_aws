@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Critter, from @msurguy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="./css/bootstrap.min.css" media="all" type="text/css" rel="stylesheet">
+<link href="./css/nav-fix.css" media="all" type="text/css" rel="stylesheet">
+<link href="./css/bootstrap-responsive.min.css" media="all" type="text/css" rel="stylesheet">
+
+    <link href="./css/font-awesome.css" rel="stylesheet" >
+    <style>
+      .artwork {
+        margin-top:30px;
+        margin-bottom: 30px;
+      }
+
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://demos.maxoffsky.com/critter">Critter</a>
+          <div class="btn-group pull-right">
+                        Welcome, <strong><a href="http://demos.maxoffsky.com/critter/user/index">imran</a> </strong> |
+                <a href="http://demos.maxoffsky.com/critter/home/logout">Logout</a>                      </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="http://demos.maxoffsky.com/critter">Home</a></li>
+              <li><a href="http://demos.maxoffsky.com/critter/user/index">Profile</a> </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+          <div class="span4 offset4">
+    <p class="lead"> What's happening, imran ?</p>
+    <div class="row">
+      <div class="span4 well">
+      <form method="POST" action="http://demos.maxoffsky.com/critter/user/index" accept-charset="UTF-8">        <input type="hidden" name="csrf_token" value="Zuyqj5N7nTEVrKfo0FUUzHL199M3QXDmmOPVECJP">                <textarea class="span4" id="new_critt" name="new_critt" rows="5" placeholder="Type in your new critt"></textarea>
+        <button type="submit" class="btn btn-info">Post New Critt</button>
+        </form>      </div>
+    </div>
+
+    <div class="row">
+      <div class="span4 well">
+        <div class="row">
+          <div class="span1"><a href="http://demos.maxoffsky.com/critter/others/imran" class="thumbnail"><img src="./img/user.jpg" alt=""></a></div>
+          <div class="span3">
+            <h3>imran</h3>
+            <h3>First Last Name</h3>
+            <span class=" badge badge-warning">6 critts</span> <span class=" badge badge-info">0 followers</span>          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="span4 well" style="overflow-y: scroll; height:400px;">
+        <p class="lead"> Previously Critted:</p>
+            		  <hr />
+    		  <div>
+            <p>this is soo cooolll</p>
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <span class="badge pull-right">At 2017-04-01 05:41:32</span>
+            <p>&nbsp;</p>
+    			</div>      
+    		    		  <hr />
+    		  <div>
+            <p>asdadas</p>
+            <span class="badge pull-right">At 2017-04-01 05:38:17</span>
+            <p>&nbsp;</p>
+    			</div>      
+    		    		  <hr />
+    		  <div>
+            <p>asdadas</p>
+            <span class="badge pull-right">At 2017-04-01 05:38:14</span>
+            <p>&nbsp;</p>
+    			</div>      
+    		    		  <hr />
+    		  <div>
+            <p>sdas</p>
+            <span class="badge pull-right">At 2017-04-01 05:38:12</span>
+            <p>&nbsp;</p>
+    			</div>      
+    		    		  <hr />
+    		  <div>
+            <p>asd</p>
+            <span class="badge pull-right">At 2017-04-01 05:38:08</span>
+            <p>&nbsp;</p>
+    			</div>      
+    		    		  <hr />
+    		  <div>
+            <p>imran ia hasdasdadnadnajdajdajdn</p>
+            <span class="badge pull-right">At 2017-04-01 05:38:04</span>
+            <p>&nbsp;</p>
+    			</div>      
+    		        <hr />
+        <ul class="pager"><li class="previous disabled"><a href="#">&laquo; Previous</a></li><li class="next disabled"><a href="#">Next &raquo;</a></li></ul>      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="container">
+      <hr />
+      <div class="row">
+        <div class="span12">
+        <p>Critter from you.</p>
+        </div>
+      </div>
+    </div>
+  <script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+    <script src="./js/charcounter.js"></script>
+  <script src="./js/app.js"></script>
+  </body>
+</html>

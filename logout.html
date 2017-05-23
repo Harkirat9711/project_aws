@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Critter, from @msurguy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="./css/bootstrap.min.css" media="all" type="text/css" rel="stylesheet">
+<link href="./css/nav-fix.css" media="all" type="text/css" rel="stylesheet">
+<link href="./css/bootstrap-responsive.min.css" media="all" type="text/css" rel="stylesheet">
+
+    <link href="./css/font-awesome.css" rel="stylesheet" >
+    <style>
+      .artwork {
+        margin-top:30px;
+        margin-bottom: 30px;
+      }
+
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+<body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://demos.maxoffsky.com/critter">Critter</a>
+          <div class="btn-group pull-right">
+                          <a class="btn" href="http://demos.maxoffsky.com/critter/home/login">
+                <i class="icon-user"></i> Login
+              </a>
+                      </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="http://demos.maxoffsky.com/critter">Home</a></li>
+                          </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="span4 offset4">
+  <div class="row">
+    <div class="span4">
+      <p class="lead">Sign in to Critter</p>
+      <form class="well" method="POST" action="http://demos.maxoffsky.com/critter/home/login" accept-charset="UTF-8">        <input type="hidden" name="csrf_token" value="Zuyqj5N7nTEVrKfo0FUUzHL199M3QXDmmOPVECJP">        
+        
+                    <div class=" alert alert-success"><a class="close" data-dismiss="alert" href="#">&times;</a>You have been logged out!</div>                <input class="span3" placeholder="Username" type="text" name="username">        <input class="span3" placeholder="Password" type="password" name="password">        <label class="checkbox"><input type="checkbox" name="remember" value="1"> Remember Me</label>        <button class="btn-info btn" type="submit">Login</button>      </form>    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="container">
+      <hr />
+      <div class="row">
+        <div class="span12">
+        <p>Critter from you.</p>
+        </div>
+      </div>
+    </div>
+  <script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+      </body>
+</html>
