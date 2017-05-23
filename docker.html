@@ -43,9 +43,9 @@
             <ul class="nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="intro.html">ECS Introduction</a> </li>
-              <li class="active"><a href="benefits.html">Benefits of ECS</a> </li>
+              <li><a href="benefits.html">Benefits of ECS</a> </li>
               <li><a href="features.html">ECS Features</a> </li>
-              <li><a href="docker.html">Intro to docker</a> </li>
+              <li class="active"><a href="docker.html">Intro to docker</a> </li>
               <li><a href="demo.html">Demo and Tutorial</a> </li>
               <li><a href="gotchas.html">Common Docker Gotchas</a> </li>
               <li><a href="Resources.html">Resources</a> </li>
@@ -69,29 +69,58 @@
         <li><a href="intro.html">ECS Introduction</a> </li>
         <li><a href="benefits.html">Benefits of ECS</a> </li>
         <li><a href="features.html">ECS Features</a> </li>
-        <li><a href="docker.html">Intro to docker</a> </li>
+        <li class="active"><a href="docker.html">Intro to docker</a> </li>
         <li><a href="demo.html">Demo and Tutorial</a> </li>
         <li><a href="gotchas.html">Common Docker Gotchas</a> </li>
         <li><a href="Resources.html">Resources</a> </li>
       </ul>
       <p>&nbsp;</p>
-      <h2><strong>Benefits of using ECS</strong></h2>
-      
-      <p>ECS offers several benefits when it comes to deploying dynamic web applications at large scale and in a highly available. Since it uses the underlying technology of docker, it becomes very simple to containerize applications and deploy them in seconds. 
-      ECS most prominent advantages are:</p>
-      <ul>
-      <li>Elastic web-scale computing</li> 
-      <li> Completely controlled </li>
-      <li> No additional charges</li> 
-      <li>Supports docker-compose style yaml files</li>
-      <li>Multiple web apps under same cluster</li>
-      <li>Build once, push to registry, and deploy anywhere</li>
-      </ul>
-      <p> ECS totally comforts to the core docker mission which is <strong><i>Build, ship,run, anywhere</i></strong></p>
+      <h2><strong>What is Docker</strong></h2>
+      <p>
+* Virtualizes” the application layer
+
+* A bunch of CRUD on top of Linux cgroups
+
+* Layered filesystem
+
+* Has A registry
+
+      </p>
+      <h2><strong>Docker vs VM</strong></h2>
       <div class="media-object">
-        <img src="img/docker.png">
+        <img src="img/d2.png">
       </div>
-      <p>&nbsp;</p>
+      <br>
+      <h2><strong>Docker Hub</strong></h2>
+      <div class="media-object">
+        <img src="img/d3.png">
+      </div>
+      <br>
+      <h2><strong>Installing docker</strong></h2>
+      <div class="well">
+      <p> sudo apt-get install linux-image-extra-`uname -r`</p>
+      <p> curl -SSL https://get.docker.com/ubuntu/ | sudo sh</p>
+      </div>
+      <h2><strong>Running docker</strong></h2>
+      <div class="media-object">
+        <img src="img/d5.png">
+      </div>
+      <br>
+      <h2><strong>Docker Registry</strong></h2>
+      <div class="media-object">
+        <img src="img/d6.png">
+      </div>
+      <br>
+      <h2><strong>Push to registry</strong></h2>
+      <div class="media-object">
+        <img src="img/d6.png">
+      </div>
+      <br>
+      <h2><strong>Pull from registry</strong></h2>
+      <div class="media-object">
+        <img src="img/d7.png">
+      </div>
+      <br>
 
 
     </div>
