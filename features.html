@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Project 2 Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the Tutorial for Project 2 of cs6320 course">
+    <meta name="author" content="Muhammad Malik">
+
+    <link href="./css/bootstrap.min.css" media="all" type="text/css" rel="stylesheet">
+<link href="./css/nav-fix.css" media="all" type="text/css" rel="stylesheet">
+<link href="./css/bootstrap-responsive.min.css" media="all" type="text/css" rel="stylesheet">
+
+    <link href="./css/font-awesome.css" rel="stylesheet" >
+    <style>
+      .artwork {
+        margin-top:30px;
+        margin-bottom: 30px;
+      }
+
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">ECS Tutorial</a>
+          <div class="btn-group pull-right">
+                        Welcome                     
+           </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="intro.html">ECS Introduction</a> </li>
+              <li><a href="benefits.html">Benefits of ECS</a> </li>
+              <li class="active"><a href="features.html">ECS Features</a> </li>
+              <li><a href="demo.html">Demo and Tutorial</a> </li>
+              <li><a href="Resources.html">Resources</a> </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+<div class="container">
+  <div class="row">
+  <div class="span4 offset2">
+  <div class="row">
+    <div class="span8">
+      <h1 class="lead"><strong>Tutorial: Deploying Scalable NodeJS app using ECS with Docker</strong></h1>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <h2>Table of Contents </h2>
+      <ul>
+        <li><a href="intro.html">ECS Introduction</a> </li>
+        <li><a href="benefits.html">Benefits of ECS</a> </li>
+        <li><a href="features.html">ECS Features</a> </li>
+        <li><a href="demo.html">Demo and Tutorial</a> </li>
+        <li><a href="Resources.html">Resources</a> </li>
+      </ul>
+      <p>&nbsp;</p>
+      <h2><strong>Features of ECS</strong></h2>
+      <p>Amazon ECS is a regional service that simplifies running application containers in a highly available manner across multiple Availability Zones within a region. You can create Amazon ECS clusters within a new or existing VPC. After a cluster is up and running, you can define task definitions and services that specify which Docker container images to run across your clusters. Container images are stored in and pulled from container registries, which may exist within or outside of your AWS infrastructure.
+      </p>
+      <div class="media-object">
+        <img src="img/overview.png">
+      </div>
+      <br>
+      <p>The following section aims at taking a deep dive into each of ECS features shown above.</p>
+      <h3>Container and Images</h3>
+      <p>ECS makes use of docker as core underlying technology to drive the deployment engine and mechanism using docker containers and images. A container is like a running instance of app whereas an image is immutable form of container, when its not started yet. 
+
+      To deploy applications on Amazon ECS, your application components must be architected to run in containers. A Docker container is a standardized unit of software development, containing everything that your software application needs to run.
+      Images are typically built from a Dockerfile, a plain text file that specifies all of the components that are included in the container. These images are then stored in a registry from which they can be downloaded and run on your container instances.
+
+      </p>
+      <div class="media-object">
+        <img src="img/overview-containers.png">
+      </div>
+      <h3>Task Definitions</h3>
+      <p>Task definitions are textual description of the actual tasks that need to run for your webapp. You define various parameters in a YAML or JSON file about what docker images its going to use, what ports should be open, what data volumes need to be mounted etc.  To prepare your application to run on Amazon ECS, you create a task definition. The task definition is a text file in JSON format that describes one or more containers that form your application. It can be thought of as a blueprint for your application</p>
+      <h3>Clusters</h3>
+      <p>Clusers are a logical grouping of EC2 instances, where you running tasks are placed by ECS. An application images are downloaded from whatever the registry specified to the EC2 instances within the cluster and containers are then started from those images.</p>
+      <h3>Tasks&Scheduling</h3>
+      <p>ECS task scheduler is responsible for placing tasks on container instances. A task is simply an instantiated, running form of task definition on a container instance. 
+
+      There are several different scheduling options available. For example, you can define a service that runs and maintains a specified number of tasks simultaneously.
+      </p>
+      <h3>Container Agents</h3>
+      <p>A container agent is a process that runs on each instance with the cluster and is responsible for sending information to ECS about our tasks. It runs in the form of a container and is responsible for sending information received from client about start/stop of tasks. 
+      </p>
+      <p>&nbsp;</p>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+      <hr />
+      <div class="row">
+        <div class="span12">
+        <p>CS6320 Project 2 ECS Tutorial.</p>
+        <p>Submitted By:<i>Harkirat Singh, Harman Kaur,Muhammad Imran Malik, Mauro Pappatera</i></p>
+        </div>
+      </div>
+    </div>
+
+  <script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+  </body>
+</html>

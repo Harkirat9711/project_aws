@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Project 2 Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the Tutorial for Project 2 of cs6320 course">
+    <meta name="author" content="Muhammad Malik">
+
+    <link href="./css/bootstrap.min.css" media="all" type="text/css" rel="stylesheet">
+<link href="./css/nav-fix.css" media="all" type="text/css" rel="stylesheet">
+<link href="./css/bootstrap-responsive.min.css" media="all" type="text/css" rel="stylesheet">
+
+    <link href="./css/font-awesome.css" rel="stylesheet" >
+    <style>
+      .artwork {
+        margin-top:30px;
+        margin-bottom: 30px;
+      }
+
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">ECS Tutorial</a>
+          <div class="btn-group pull-right">
+                        Welcome                     
+           </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="intro.html">ECS Introduction</a> </li>
+              <li><a href="benefits.html">Benefits of ECS</a> </li>
+              <li><a href="features.html">ECS Features</a> </li>
+              <li class="active"><a href="demo.html">Demo and Tutorial</a> </li>
+              <li><a href="Resources.html">Resources</a> </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+<div class="container">
+  <div class="row">
+  <div class="span4 offset2">
+  <div class="row">
+    <div class="span8">
+      <h1 class="lead"><strong>Tutorial: Deploying Scalable NodeJS app using ECS with Docker</strong></h1>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <h2>Table of Contents </h2>
+      <ul>
+        <li><a href="intro.html">ECS Introduction</a> </li>
+        <li><a href="benefits.html">Benefits of ECS</a> </li>
+        <li><a href="features.html">ECS Features</a> </li>
+        <li><a href="demo.html">Demo and Tutorial</a> </li>
+        <li><a href="Resources.html">Resources</a> </li>
+      </ul>
+      <p>&nbsp;</p>
+      <h2><strong> Tutorial Demo</strong></h2>
+      <p>This is a basic walk-through tutorial of how to deploy a webapp using ECS. In this tutorial, we will deploy a simple scalable nodejs app on docker containers but with ECS. 
+
+      With this, we will have our app run in a sandboxed environment in the form of docker container and using ECS, we can demonstrate how we can scale it better.
+      </p>
+      <h3> Demo of Working Application</h3>
+      <p> In this demo, we will show you how to deploy a scalable,load-balanced and high available  simple nodejs app. The demo will have multiple instances of nodejs app each running inside a container and load-balanced through haproxy. 
+
+      The basic architecture looks like following:
+      </p>
+      <br>
+     <div class="media-object">
+        <img src="img/what.png">
+      </div>
+      <br>
+
+      <p>The app as a whole consists of four components that will be deployed: </p>
+      <ul>
+        <li> Haproxy(for load-balancing) </li>
+        <li> App(Simple node JS app that prints out the port it started on) </li>
+        <li> MondoDB and Redis as backend </li>
+      </ul>
+
+      <p>The demo will first walk-through setting ECS cluster from Web UI of AWS and later how to use ECS CLI.</p>
+      <h3><strong><u> i) Creating a ECS Cluster </u></strong></h3>
+      <p>First step in deploying any web application to create an ECS cluster from aws console. This is a fairly simple step as show in picture below:
+      </p>
+      <div class="media-object">
+        <img src="img/createcluster2.png">
+      </div>
+      <br>
+      <h3><strong><u> ii) Install and Configure ECS CLI </u></strong></h3>
+      <p>Now that a bare minimum cluster is created its time to use ECS CLI. ECS CLI is a command line tool that you can use with given credentials to manage you cluster and prepare to run tasks and services on it. </p>
+      <h4><u> Installing ECS CLI </u></h4>
+      <p> To install the ECS CLI , simply download the ECS CLI binary as shown here</p>
+      <div class="media-object">
+        <img src="img/installecscli.png">
+      </div>
+      <br>
+      <h4><u> Configure the ECS CLI with credentials</u></h4>
+      <p> Next step is to configure ECS CLI so that it stores our AWS credentials. Use your own AWS credentials with ECS CLI as:</p>
+      <div class="well">
+        <p>ecs-cli configure --region us-west-2 --access-key <key> --secret-key <secret> --cluster cs6320
+        <br>
+        INFO[0000] Saved ECS CLI configuration for cluster (cs6320)
+        </p>
+      </div>
+
+      <h3><strong><u> iii) Creating the ECS Cluster from CLI</u></strong></h3>
+      <p> ECS CLI gives you full capability to create cluster from the CLI also.</p>
+      <div class="media-object">
+        <img src="img/createcluster.png">
+      </div>
+
+      <br>
+      <h3><strong><u> iv) Use a docker-compose YAML file for task definition </u></strong></h3>
+      <p> Declaring tasks can be done from the Console or CLI. ECS CLI has a neat feature of supporting docker-compose , which are docker native way of declaring services. We avoided the hassle by reusing same compose based definitions as ECS CLI already supported them.  
+      The compose for our app looks like:</p>
+      <div class="media-object">
+        <img src="img/composeyaml.png">
+      </div>
+      <br>
+
+      <h3><strong><u> v) Start a task and services from YAML file </u></strong></h3>
+      <p> Now is the time to finally start our webapp from the compose file. </p>
+      <div class="media-object">
+        <img src="img/composeup.png">
+      </div>
+      <br>
+      <p> Once that’s successful, you will see the status using ecs cli. </p>
+
+      <h3><strong><u> vi) Verify cluster status and containers</u></strong></h3>
+      <p> Now we verify the status of containers by running “ps” command from ecs-cli as: </p>  
+      <div class="media-object">
+        <img src="img/ps.png">
+      </div>
+      <br>
+      <h3><strong><u> vii) Verify services and task from Console</u></strong></h3>
+      <p> We can also verify that all services are up and cluster status from console. </p>  
+      <div class="media-object">
+        <img src="img/clusterstatus.png">
+      </div>
+      <br>
+
+      <h3><strong><u> viii)  Scaling to multiple web apps from ECS CLI</u></strong></h3>
+      <p> Scaling a webapp to multiple instances is simply one command. Lets say we want to scale to 5 , we can then issue the command as: </p>  
+      <div class="well">
+        <p>ecs-cli compose  --file docker-compose.yml --project-name cs6320_1 scale 5 </p>
+      </div>
+      <br>
+      <p>&nbsp;</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+      <hr />
+      <div class="row">
+        <div class="span12">
+        <p>CS6320 Project 2 ECS Tutorial.</p>
+        <p>Submitted By:<i>Harkirat Singh, Harman Kaur,Muhammad Imran Malik, Mauro Pappatera</i></p>
+        </div>
+      </div>
+    </div>
+
+  <script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+  </body>
+</html>
