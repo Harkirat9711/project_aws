@@ -41,13 +41,14 @@
            </div>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="intro.html">ECS Introduction</a> </li>              
+              <li><a href="index.html">Home</a></li>
+              <li><a href="intro.html">ECS Introduction</a> </li>
               <li><a href="benefits.html">Benefits of ECS</a> </li>
               <li><a href="features.html">ECS Features</a> </li>
               <li><a href="demo.html">Demo and Tutorial</a> </li>
-              <li><a href="gotchas.html">Common Docker Gotchas</a> </li>
+              <li class="active"><a href="gotchas.html">Common Docker Gotchas</a> </li>
               <li><a href="Resources.html">Resources</a> </li>
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -63,13 +64,6 @@
       <h1 class="lead"><strong>Tutorial: Deploying Scalable NodeJS app using ECS with Docker</strong></h1>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
-      <h2><strong>Introduction</strong></h3>
-      <h3>Objective</h3>
-      <p>The objective of this project is to demonstrate the working of Amazon ECS by deploying a simple nodeJS app and scaling it.</p>
-      <h3>Goal</h3>
-      <p>The goal of this project is fully demonstrate the usage of ECS container service to deploy a web app but using docker containers. The tutorial aims to give insight on the simplicity of scaling a web app when using Amazon ECS. 
-      </p>
-      <p>&nbsp;</p>
       <h2>Table of Contents </h2>
       <ul>
         <li><a href="intro.html">ECS Introduction</a> </li>
@@ -79,6 +73,23 @@
         <li><a href="gotchas.html">Common Docker Gotchas</a> </li>
         <li><a href="Resources.html">Resources</a> </li>
       </ul>
+      <p>&nbsp;</p>
+      <h2><strong><u>Common Docker Gotchas</u></strong></h2>
+      
+      <p> 
+      <ul>
+        <li>Containers go away when the process exits</li>
+        <li>If you run /bin/bash, attach, and then type “exit”, the container is  killed</li>
+        <li>Data is gone when containers exit. Keep important stuff on the host  filesystem</li>
+        <li>Keep Dockerfiles short</li>
+        <li>Move the bulk of work into a shell script and execute it</li>
+        <li>Avoid making changes directly to the container</li>
+      </ul>
+
+</p>
+      <p>&nbsp;</p>
+
+
     </div>
     </div>
     </div>
