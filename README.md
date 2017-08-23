@@ -1,14 +1,11 @@
-# cs6320-project1.github.io Project Tutorial Website
+# CS6580 Project Tutorial Website
 
-This is the source code for the tutorial [website](https://cs6320-project1.github.io) for CS6320 Project 2 http://algebra.sci.csueastbay.edu/~grewe/CS6320/Project2.html 
+This is the source code for the poject tutorial [website](https://harkirat9711.github.io/project_aws/) for CS6580 Project.
 
 The tutorial is about using Amazon ECS to deploy a scalable web-apps cluster.
 
 ## Submitted By
 * Harkirat Singh
-* Muhammad Imran Malik
-* Harman Kaur
-* Mauro Pappatera
 
 ## Website Link
- Visit the website here [https://cs6320-project1.github.io](https://cs6320-project1.github.io)
+ Visit the website here [https://harkirat9711.github.io/project_aws/](https://harkirat9711.github.io/project_aws/)
