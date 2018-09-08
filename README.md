@@ -1,6 +1,6 @@
-# NOJEJS Webapp running on AWS ECS instance Project Tutorial Website
+# NODEJS Webapp running on AWS ECS instance Project Tutorial Website
 
-This is the source code for the project tutorial [website](https://harkirat9711.github.io/project_aws/) for CS6580 Project.
+This is the source code blog for the project tutorial [website](https://harkirat9711.github.io/project_aws/)
 
 The tutorial is about using Amazon ECS to deploy a scalable web-apps cluster.
 
